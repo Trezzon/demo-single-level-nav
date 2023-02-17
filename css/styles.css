@@ -1,1 +1,85 @@
 /* dev styles go here */
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #191919;
+}
+
+nav {
+    max-width: 78.75rem;
+    margin: 0 auto;
+}
+
+
+/* style the text directly on the anchor tag to overwrite the browser style */
+.nav-menu a {
+    color: #f5f5f5;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* increase the size of the anchor tag to match the size of the li */
+    display: block;
+    /* move the text away from the left edge, but still allow it to be clickable area */
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-menu a:hover,
+.nav-menu a:active {
+    color: #39ff14;
+}
+
+
+/* style the layout and spacing on the li */
+.nav-menu li {
+    line-height: 3.75rem;
+    margin-bottom: 0.5rem;
+
+}
+
+/* create a breakpoint when there is room for the links to start displying in a row*/
+
+.nav-menu svg{
+    width: 1.25rem;
+}
+
+.nav-menu path,
+.nav-menu rect {
+    fill: #f5f5f5;
+}
+
+@media screen and (min-width: 480px) {
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-menu li {
+        /* border: 1px solid white; */
+        /* flex-grow: 1; */
+        flex: 1 0 auto;
+    }
+
+    .nav-menu a {
+        text-align: center;
+        justify-content: center;
+    }
+}
